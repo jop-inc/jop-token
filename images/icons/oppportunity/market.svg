@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="70" viewBox="0 0 72 70">
+    <defs>
+        <path id="a" d="M0 .09v36.792l32.07 14.236L47.904.09z"/>
+        <radialGradient id="b" fx="50%" fy="50%" gradientTransform="matrix(0 1 -.9989 0 1 0)">
+            <stop offset="0%" stop-color="#F6D87D"/>
+            <stop offset="100%" stop-color="#EAAF47"/>
+        </radialGradient>
+        <path id="d" d="M39.09.092v37.386l31.748 14.196-11.852 25.32L.101 64.75 9.073 7.524z"/>
+        <radialGradient id="e" r="50.553%" fx="50%" fy="50%" gradientTransform="matrix(0 .98906 -1 0 1 .005)">
+            <stop offset="0%" stop-color="#62C9E8"/>
+            <stop offset="100%" stop-color="#39C"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(38 -3)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <ellipse cy="36.715" fill="url(#b)" mask="url(#c)" rx="33.063" ry="33.026"/>
+        </g>
+        <g transform="translate(-5 -1)">
+            <mask id="f" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <ellipse cx="39.09" cy="37.308" fill="url(#e)" mask="url(#f)" rx="33.193" ry="33.56"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,348 @@
+
+
+/* Type */
+
+	html {
+		font-size: 24px;
+
+		@include breakpoint(xlarge) {
+			font-size: 19px;
+		}
+
+		@include breakpoint(large) {
+			font-size: 16px;
+		}
+
+		@include breakpoint(small) {
+			font-size: 15px;
+		}
+
+		@include breakpoint(xxsmall) {
+			font-size: 14px;
+		}
+	}
+
+	body {
+		background-color: _palette(bg);
+		color: _palette(fg);
+	}
+
+	body, input, select, textarea {
+		font-family: _font(family);
+		font-size: 1rem;
+		font-weight: _font(weight);
+		line-height: 1.65;
+	}
+
+	a {
+		@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+	}
+
+
+
+	strong, b {
+		font-weight: _font(weight-bold);
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p {
+		font-size: 0.9rem;
+		&.major {
+			font-size: 1.5rem;
+		}
+
+		&.headline {
+			font-size: 1.3rem;
+			font-weight: normal;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: _font(weight-semi-bold);
+		letter-spacing: _font(kerning-alt);
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	b {
+		font-weight: _font(weight-semi-bold);
+	}
+
+	h1 {
+		font-weight: _font(weight-bold);
+		font-size: 2.5rem;
+
+		line-height: 1.09;
+
+		.subtitle {
+			font-size: 2rem;
+			line-height: 1.46;
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+
+	}
+
+	h3 {
+		font-size: 1rem;
+		color: _palette(color4);
+		font-weight: normal;
+		text-transform: uppercase !important;
+
+		&.left {
+			margin-left: _size(line)  * 1.3;
+		}
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		font-weight: _font(weight-semi-bold);
+		letter-spacing: _font(kerning-alt-xxsmall);
+	}
+
+	h5 {
+		color: _palette(color4);
+		font-weight: normal;
+		font-size: 2.5rem;
+		letter-spacing: _font(kerning-tigh);
+	}
+
+	h6 {
+		font-size: 0.7rem;
+	}
+
+	sub {
+		font-size: 0.8rem;
+		position: relative;
+		top: 0.5rem;
+	}
+
+	sup {
+		font-size: 0.8rem;
+		position: relative;
+		top: -0.5rem;
+	}
+
+	.quote-background{
+		background: url(../../images/icons/quote-open.svg) top left no-repeat, url(../../images/icons/quote-close.svg) bottom right no-repeat;
+	}
+
+	.quote{
+		font-size: 1.3rem;
+		line-height: 1.25;
+		font-style: italic;
+	}
+
+	.quote-source{
+		color: _palette(fg);
+		font-size: 0.7rem;
+		letter-spacing: _font(kerning-tigh);
+	}
+
+	blockquote {
+		border-left: solid (_size(border-width) * 4);
+		font-style: italic;
+		margin: 0 0 _size(element-margin) 0;
+		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	}
+
+	code {
+		border-radius: _size(border-radius);
+		font-family: _font(family-fixed);
+		font-size: 0.9em;
+		margin: 0 0.25rem;
+		padding: 0.25rem 0.325rem;
+	}
+
+	pre {
+		-webkit-overflow-scrolling: touch;
+		font-family: _font(family-fixed);
+		font-size: 0.9em;
+		margin: 0 0 _size(element-margin) 0;
+
+		code {
+			display: block;
+			line-height: 1.5;
+			padding: 0.75rem 1rem;
+			overflow-x: auto;
+		}
+	}
+
+	.follow{
+			font-size: 1rem;
+			letter-spacing: _font(kerning-alt-xsmall);
+	}
+
+	.footer-link{
+		a {
+			padding: 0 1rem;
+			text-decoration: none;
+			letter-spacing: _font(kerning-alt-xsmall);
+			font-size: 1.2rem;
+		}
+
+		@include breakpoint(medium) {
+			a {
+				padding: 0 1rem;
+				font-size: 1rem;
+			}
+		}
+
+		@include breakpoint(small) {
+			a {
+				padding: 0 0.5rem;
+				font-size: 0.8rem;
+			}
+		}
+
+	}
+
+	.line {
+		position: relative;
+		margin-bottom: 3rem;
+
+		&.small {
+			margin : 0;
+		}
+	}
+
+	.percentage{
+		color: _palette(color5);
+		font-weight: _font(weight-bold);
+		font-size: 1.2rem;
+		margin-left: 0.5rem;
+	}
+
+	hr {
+		width: _size(line);
+		border: 0;
+		border-bottom: solid _size(border-width);
+
+
+
+		&.left{
+			position: absolute;
+			top: 50%;
+			margin-top: 0;
+		}
+
+	}
+
+	.align-left {
+		text-align: left;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	.align-right {
+		text-align: right;
+	}
+
+	.team-name{
+		font-size: 1rem;
+		margin-bottom: 0.1rem;
+	}
+
+	@include breakpoint(small) {
+		p {
+			&.major {
+				font-size: 1.1rem;
+			}
+
+			&.headline {
+				font-size: 1.1rem;
+			}
+		}
+
+		.quote{
+			font-size: 1.1rem;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+
+			.subtitle {
+				font-size: 1.2rem;
+			}
+		}
+
+		h2 {
+			font-size: 1.3rem;
+		}
+
+		h3 {
+			font-size: 1rem;
+		}
+
+		h4 {
+			font-size: 1rem;
+		}
+
+		h5 {
+			font-size: 1.25rem;
+		}
+	}
+
+	@mixin color-typography($p: null) {
+
+		@if $p != null {
+			color: _palette($p, fg);
+		}
+
+		input, select, textarea {
+			color: _palette($p, fg);
+		}
+
+		a {
+			color: _palette($p, fg);
+
+			&.team-link{
+				&:hover {
+					color: inherit;
+				}
+			}
+
+			&:hover {
+				color: _palette($p, accent);
+			}
+		}
+
+		strong, b {
+			color: _palette($p, fg);
+		}
+
+		h1, h2, h4, h6 {
+			color: _palette($p, fg);
+		}
+
+		blockquote {
+			border-left-color: _palette($p, border);
+		}
+
+		code {
+			background: _palette($p, border-bg);
+			border-color: _palette($p, border);
+		}
+
+		hr {
+			border-bottom-color: _palette($p, color4);
+		}
+	}
+
+	@include color-typography;
