@@ -213,10 +213,34 @@
 
 	.line {
 		position: relative;
-		margin-bottom: 3rem;
+		margin-bottom: _size(padding, default);
 
 		&.small {
 			margin : 0;
+		}
+	}
+
+	@include breakpoint(xlarge) {
+		.line {
+			margin-bottom: _size(padding, xlarge);
+		}
+	}
+
+	@include breakpoint(large) {
+		.line {
+			margin-bottom: _size(padding, large);
+		}
+	}
+
+	@include breakpoint(medium) {
+		.line {
+		margin-bottom: _size(padding, medium);
+		}
+	}
+
+	@include breakpoint(small) {
+		.line {
+			margin-bottom: _size(padding, small);
 		}
 	}
 

@@ -264,7 +264,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 								<li>Earn JOPT rewards for every service you book!</li>
 							</ul>
 						</div>
-						<div class="col-12 col-md-6 text-center carousel-container ">
+						<div class="col-12 col-md-6 pt-5 pt-md-0 text-center carousel-container ">
 							<div id="carousel-user-ui" class="carousel slide carousel-fade" data-ride="carousel">
 								<ol class="carousel-indicators" >
 									<li v-for="index in carousel.user.size" data-target="#carousel-user-ui" :data-slide-to="index" :class="{ active: index == 1}"></li>
@@ -286,7 +286,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 						</div>
 					</div>
 					<div class="row carousel-main">
-						<div class="col-12 col-md-6 text-center carousel-container order-2 order-md-1">
+						<div class="col-12 col-md-6 pt-5 pt-md-0 text-center carousel-container order-2 order-md-1">
 							<div id="carousel-jopper-ui" class="carousel slide carousel-fade" data-ride="carousel">
 								<ol class="carousel-indicators" >
 									<li v-for="index in carousel.jopper.size" data-target="#carousel-jopper-ui"
@@ -369,7 +369,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 						</div>
 						<h3 class="ml-3">Timeline</h3>
 					</div>
-					<div class="items onload-fade-in row">
+					<div class="items onload-fade-in row mt-3">
 						<div class="col-12 col-md-6 px-2 mb-0">
 							<img class="img-fluid" src="images/content/timeline/phase-1.png" srcset="images/content/timeline/phase-1@2x.png 2x, images/content/timeline/phase-1@3x.png 3x">
 						</div>
@@ -421,7 +421,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 				</div>
 				<div class="inner">
 					<h2>Use of Funds</h2>
-					<div class="items onload-fade-in row">
+					<div class="items onload-fade-in row mt-5">
 						<div v-for="fund in list.funds.data" class="col-12 col-sm-3 px-2 px-md-4 fund-item">
 							<div class="d-flex flex-row justify-content-center align-items-center">
 								<img :src="list.funds.path + fund.image" class="icon-chart">
@@ -444,7 +444,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 						<h3 class="ml-3">Brainpower</h3>
 					</div>
 					<h2 class="mt-5 md-5">Made Of Amazing People</h2>
-					<div class="row onload-fade-in items" >
+					<div class="row onload-fade-in items mt-5" >
 						<div class="col-12" :class="item.classObject" v-for="item in list.team.data.main">
 							<a :href="item.link" target="_blank" class="team-link">
 								<div class="d-flex flex-column p-2 team-shadow ">
@@ -470,10 +470,10 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 				</div>
 				<div class="mb-5">
 					<div class="d-md-inline-flex flex-row justify-content-center align-items-center">
-						<div class="mr-2">
-							<img src="images/team/joppers.png" srcset="images/team/joppers@2x.png 2x, images/team/joppers@3x.png 3x"/>
+						<div class="mx-5 mx-md-3">
+							<img class="img-fluid" src="images/team/joppers.png" srcset="images/team/joppers@2x.png 2x, images/team/joppers@3x.png 3x"/>
 						</div>
-						<h2 class="ml-2">Backed by 6,400 Jopper Community</h2>
+						<h2 class="mx-5  mx-md-3">Backed by 6,400 Jopper Community</h2>
 					</div>
 				</div>
 			</section>
@@ -482,7 +482,7 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 			<section class="wrapper style1 align-center color1" id="partners">
 				<div class="inner">
 					<h2>Partners</h2>
-					<div class="row onload-fade-in items">
+					<div class="row onload-fade-in items mt-5">
 						<div class="col-12 col-md-6 col-xl-3 p-2" v-for="item in partners.data">
 							<img class="img-fluid" :src="partners.path + item + '.png'"
 							:srcset="partners.path + item + '@2x.png 2x, ' + partners.path + item + '@3x.png 3x'"
@@ -547,22 +547,24 @@ y0u c4n f1nd 4n h1n7 1n 7h3 c0d3 !
 			<footer class="banner style5 color3 orient-center content-align-center image-position-center" id="">
 				<div class="content">
 					<img src="images/navbar/jop-logo.svg" class="icon-footer mt-5 mb-5">
-					<div class="d-flex justify-content-center footer-link mb-3">
+					<div class="d-flex flex-column flex-sm-row justify-content-center footer-link mb-3">
 						<a href="https://www.jop.me/faq" target="_blank">FAQ</a>
 						<a href="https://www.jop.me/privacy" target="_blank">Privacy Policy</a>
 						<a href="https://www.jop.me/terms" target="_blank">Terms & Conditions</a>
 						<a href="https://www.jop.me/contact" target="_blank">Contact Us</a>
 						<a href="https://www.jop.me/" target="_blank">Jop.me</a>
 					</div>
-					<div class="d-flex flex-row justify-content-center align-items-center pt-5 pb-5">
-						<p class="pr-3 follow">Follow us</p>
 
+
+					<div class="d-flex flex-row  justify-content-center align-items-center pt-5 pb-5">
+						<!-- <p class="pr-3 follow">Follow us</p> -->
 						<div class="d-flex flex-row justify-content-center align-items-center" v-for="icon in links">
 							<a target="_blank" :href="icon.href" class="icon-dark">
 								<i class="fab" :class="icon.fa"></i>
 							</a>
 						</div>
 					</div>
+
 				</div>
 				<div class="image">
 					<img src="images/banner/banner.jpg" srcset="images/banner/banner@2x.jpg 2x, images/banner/banner@3x.jpg 3x"/>

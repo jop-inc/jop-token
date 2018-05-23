@@ -4,25 +4,45 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 $( document ).ready(function() {
+
+	function is_touch_device() {
+		return (('ontouchstart' in window)
+		|| (navigator.MaxTouchPoints > 0)
+		|| (navigator.msMaxTouchPoints > 0));
+	}
+
 		var carouselComments = $('.carousel-comments');
 		var iv;
 
 		var scrollCarousel = function(index){
 			iv = setInterval(function(){
 				carouselComments.scrollTop(carouselComments.scrollTop() + index);
-				//console.log('downLeft');
 			},20);
 		}
 
-		$('.carousel-comments-controls-up').mouseover(function(){
-			scrollCarousel(-2);
-		});
-		$('.carousel-comments-controls-down').mouseover(function(){
-			scrollCarousel(2);
-		});
-		$('.carousel-comments-controls-up,.carousel-comments-controls-down').on('mouseout mouseleave', function(){
-			clearInterval(iv);
-		});
+		var scrollOnceCarousel = function(index){
+			carouselComments.animate({ scrollTop: carouselComments.scrollTop() + index });
+		}
+
+		if(is_touch_device()){
+			$('.carousel-comments-controls-up').click(function(){
+				scrollOnceCarousel(-150);
+
+			});
+			$('.carousel-comments-controls-down').click(function(){
+				scrollOnceCarousel(150);
+			});
+		}else {
+			$('.carousel-comments-controls-up').mouseover(function(){
+				scrollCarousel(-2);
+			});
+			$('.carousel-comments-controls-down').mouseover(function(){
+				scrollCarousel(2);
+			});
+			$('.carousel-comments-controls-up,.carousel-comments-controls-down').on('mouseout mouseleave', function(){
+				clearInterval(iv);
+			});
+		}
 });
 
 

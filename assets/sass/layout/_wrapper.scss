@@ -61,6 +61,13 @@
 		 padding-top: _size(padding, default)*2
 	}
 
+
+	@include breakpoint(medium) {
+		.botton-wrapper {
+		 padding-top: 0
+		}
+	}
+
 	.linkedin{
 		width: 20px;
 		height: 20px;
